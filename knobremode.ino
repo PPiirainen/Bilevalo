@@ -1,4 +1,3 @@
-//Knob remomoved code from https://github.com/bartlettmic/SparkFun-RGB-LED-Music-Sound-Visualizer-Arduino-Code/blob/master/Visualizer_Program/Visualizer_Program.ino 
 //SparkFun Addressable RGB LED Sound and Music Visualizer Tutorial Arduino Code by Michael Bartlett
 
 //Libraries
@@ -9,7 +8,7 @@
 
 //Constants (change these as necessary)
 #define LED_PIN   6  //Pin for the pixel strand. Can be analog or digital.
-#define LED_TOTAL 36  //Change this to the number of LEDs in your strand.
+#define LED_TOTAL 60  //Change this to the number of LEDs in your strand.
 #define LED_HALF  LED_TOTAL/2
 #define VISUALS   6   //Change this accordingly if you add/remove a visual in the switch-case in Visualize()
 
@@ -79,7 +78,7 @@ float avgTime = 0;  //Holds the "average" amount of time between each "bump" (us
 //////////<Standard Functions>
 
 void setup() {    //Like it's named, this gets ran before any other function.
-
+analogReference(EXTERNAL);
   Serial.begin(9600); //Sets data rate for serial data transmission.
 
   //Defines the buttons pins to be input.
